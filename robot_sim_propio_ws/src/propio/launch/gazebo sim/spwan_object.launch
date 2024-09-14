@@ -1,0 +1,9 @@
+<launch>
+
+  <!-- Set the robot urdf on the parameter server -->
+  <param name="table" textfile="$(find propio)/objects/table.urdf" />
+
+  <!-- Spawn the robot in Gazebo -->
+  <node name="spawn_table" pkg="gazebo_ros" type="spawn_model" args="-urdf -param table 
+  -z 0.01 -model table_model" respawn="false" output="screen" />
+</launch>

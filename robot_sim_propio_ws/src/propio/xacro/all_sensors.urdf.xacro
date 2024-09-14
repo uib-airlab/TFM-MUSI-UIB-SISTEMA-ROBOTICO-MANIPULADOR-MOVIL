@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<robot name="all_sensors"
+  xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <xacro:include filename="Sensors/utils/inertia.urdf.xacro" />
+  <xacro:include filename="Sensors/utils/material.urdf.xacro" />
+  
+  <!-- This file unifies all sensors that can be used on simulation, defined as xacro:macros -->
+
+  <!-- Pantilt -->
+  <xacro:include filename="Sensors/pantilt.urdf.xacro" />
+
+  <!-- Axis p5512 -->
+  <xacro:include filename="Sensors/axis.urdf.xacro" />
+
+  <!-- Axis m5013 -->
+  <xacro:include filename="Sensors/axis_m5013.urdf.xacro" />
+
+  <!-- Axis m5525 -->
+  <xacro:include filename="Sensors/axis_m5525.urdf.xacro" />
+
+  <!-- Axis q8641 -->
+  <xacro:include filename="Sensors/axis_q8641.urdf.xacro" />
+  
+  <!-- BLK ARC -->
+  <xacro:include filename="Sensors/blk_arc.urdf.xacro" />
+
+  <!-- Flir AX8 -->
+  <xacro:include filename="Sensors/flir_ax8.urdf.xacro" />
+
+  <!-- Fotonic E Series -->
+  <xacro:include filename="Sensors/fotonic_e.urdf.xacro" />
+
+  <!-- GPS -->
+  <xacro:include filename="Sensors/gps.urdf.xacro" />
+  <xacro:include filename="Sensors/gps_with_mast.urdf.xacro" />
+
+  <!-- Hokuyo urg04lx -->
+  <xacro:include filename="Sensors/hokuyo_urg04lx.urdf.xacro" />
+
+  <!-- Hokuyo utm30lx -->
+  <xacro:include filename="Sensors/hokuyo_utm30lx.urdf.xacro" />
+  
+  <!-- Hokuyo uam05lp -->
+  <xacro:include filename="Sensors/hokuyo_uam05lp.urdf.xacro" />
+
+  <!-- Hokuyo ust10lx -->
+  <xacro:include filename="Sensors/hokuyo_ust10lx.urdf.xacro" />
+
+  <!-- Hokuyo ust20lx -->
+  <xacro:include filename="Sensors/hokuyo_ust20lx.urdf.xacro" />
+
+  <!-- Hokuyo ust30lx -->
+  <xacro:include filename="Sensors/hokuyo_ust30lx.urdf.xacro" />
+  
+  <!-- Ultrasonic sensor A21 -->
+  <xacro:include filename="Sensors/a21_ultrasonic_sensor.urdf.xacro" />
+
+  <!-- Imu -->
+  <xacro:include filename="Sensors/imu.urdf.xacro" />
+
+  <!-- Imu hector -->
+  <xacro:include filename="Sensors/imu_hector_plugin.urdf.xacro" />
+
+  <!-- Kinect -->
+  <xacro:include filename="Sensors/kinect.urdf.xacro" />
+
+  <!-- Asus Xtion PRO -->
+  <xacro:include filename="Sensors/asus_xtion_pro.urdf.xacro" />
+
+  <!-- Hokuyo 3d -->
+  <xacro:include filename="Sensors/hokuyo3d.urdf.xacro" />
+
+  <!-- Sick s3000 -->
+  <xacro:include filename="Sensors/sick_s3000.urdf.xacro" />
+
+  <!-- Sick s300 -->
+  <xacro:include filename="Sensors/sick_s300.urdf.xacro" />
+
+  <!-- Sick microscan3 -->
+  <xacro:include filename="Sensors/sick_microscan3.urdf.xacro" />
+
+  <!-- Sick nanoscan3 -->
+  <xacro:include filename="Sensors/sick_nanoscan3.urdf.xacro" />
+
+  <!-- Sick outdoorscan3 -->
+  <xacro:include filename="Sensors/sick_outdoorscan3.urdf.xacro" />
+
+  <!-- KinectV2 -->
+  <xacro:include filename="Sensors/kinectv2.urdf.xacro" />
+
+  <!-- Sick Tim 551 -->
+  <xacro:include filename="Sensors/sick_tim551.urdf.xacro" />
+
+  <!-- Sick Tim 571 -->
+  <xacro:include filename="Sensors/sick_tim571.urdf.xacro" />
+
+  <!-- Sick Tim 551 -->
+  <xacro:include filename="Sensors/sick_tim551.urdf.xacro" />
+
+  <!-- Orbbec Astra -->
+  <xacro:include filename="Sensors/orbbec_astra.urdf.xacro" />
+  
+ <!-- Orbbec Astra Pro-->
+  <xacro:include filename="Sensors/orbbec_astra_pro.urdf.xacro" />
+
+  <!-- Zed -->
+  <xacro:include filename="Sensors/zed.urdf.xacro" />
+
+  <!-- Zed 2 -->
+  <xacro:include filename="Sensors/zed2.urdf.xacro" />
+
+  <!-- Rplidar -->
+  <xacro:include filename="Sensors/rplidar.urdf.xacro" />
+
+  <!-- Rplidar A2 -->
+  <xacro:include filename="Sensors/rplidar_a2.urdf.xacro" />
+
+  <!-- Rplidar A2 -->
+  <xacro:include filename="Sensors/rplidar_a2.urdf.xacro" />
+
+  <!-- uEye CP Gige -->
+  <xacro:include filename="Sensors/ueye_cp_gige.urdf.xacro" />
+
+  <!-- Pointgrey Bumblebee -->
+  <xacro:include filename="Sensors/pointgrey_bumblebee2.urdf.xacro" />
+
+  <!-- Intel Realsense R430 -->
+  <xacro:include filename="Sensors/intel_r430.urdf.xacro" />
+
+  <!-- Intel Realsense D435 -->
+  <xacro:include filename="Sensors/intel_d435.urdf.xacro" />
+  
+  <!-- Intel Realsense D455 -->
+  <xacro:include filename="Sensors/intel_d455.urdf.xacro" />
+
+  <!-- Velodyne VLP16 -->
+  <xacro:include filename="Sensors/velodyne_vlp16.urdf.xacro" />
+
+  <!-- Teraranger Duo-->
+  <xacro:include filename="Sensors/teraranger_tr_duo.urdf.xacro" />
+
+  <!-- Roboteq MGS -->
+  <xacro:include filename="Sensors/roboteq_mgs.urdf.xacro" />
+
+  <!-- Benewake CE-30 (includes a and c) -->
+  <xacro:include filename="Sensors/benewake_ce30.urdf.xacro" />
+
+  <!-- Benewake CE-30D -->
+  <xacro:include filename="Sensors/benewake_ce30d.urdf.xacro" />
+
+  <!-- RoboSense RS-Lidar MEMS (includes M100) -->
+  <xacro:include filename="Sensors/rslidar_mems.urdf.xacro" />
+
+  <!-- Rubedos Viper -->
+  <xacro:include filename="Sensors/rubedos_viper.urdf.xacro" />
+
+  <!-- RoboSense RS-Lidar -->
+  <xacro:include filename="Sensors/rslidar.urdf.xacro" />
+  
+  <!-- RoboSense RS-Helios 16p -->
+  <xacro:include filename="Sensors/rs_helios_16p.urdf.xacro" />
+
+  <!-- RoboSense RS-BPearl -->
+  <xacro:include filename="Sensors/rs_bpearl.urdf.xacro" />
+
+  <!-- Ydlidar -->
+  <xacro:include filename="Sensors/ydlidar_4f.urdf.xacro" />
+    
+  <!-- Ouster 1 -->
+  <xacro:include filename="Sensors/ouster1.urdf.xacro" />
+
+  <!-- Yujin YRL -->
+  <xacro:include filename="Sensors/yujin_yrl.urdf.xacro" />
+  <!-- Orbbec Embedded S -->
+  <xacro:include filename="Sensors/embedded_s.urdf.xacro" />
+
+  <!-- Sick MLS -->
+  <xacro:include filename="Sensors/sick_mls.urdf.xacro" />
+
+  <!-- Azure Kinect -->
+  <xacro:include filename="Sensors/azure_kinect.urdf.xacro" />
+
+  <!-- Lidar mast -->
+  <xacro:include filename="Sensors/lidar_mast.urdf.xacro" />
+  
+  <!-- Lidar m10_p -->
+  <xacro:include filename="Sensors/lidar_m10_p.urdf.xacro" />
+
+  <!-- Ublox -->
+  <xacro:include filename="Sensors/ublox.urdf.xacro" />
+
+  <!-- Vectornav -->
+  <xacro:include filename="Sensors/vectornav.urdf.xacro" />
+
+  <!-- Onrobot Eyes -->
+  <xacro:include filename="Sensors/onrobot_eyes.urdf.xacro" />
+
+  <!-- PILZ psen -->
+  <xacro:include filename="Sensors/pilz_psen_scan.urdf.xacro" />
+  
+  <!-- Teltonika antenna combo-->
+  <xacro:include filename="Sensors/teltonika_antenna_combo.urdf.xacro" />
+
+  <!-- Link 750 -->
+  <xacro:include filename="Sensors/link_750_nh.urdf.xacro" />
+  
+  <!-- Oak-d Pro PoE -->
+  <xacro:include filename="Sensors/oak_d_pro_poe.urdf.xacro" />
+</robot>

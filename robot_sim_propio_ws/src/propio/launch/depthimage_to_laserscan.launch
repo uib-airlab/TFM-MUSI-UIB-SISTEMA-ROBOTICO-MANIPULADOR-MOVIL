@@ -1,0 +1,12 @@
+<launch>
+    <!-- Nodo para convertir la imagen de profundidad a scan -->
+    <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan_front" output="screen">
+        <param name="scan_height" value="10"/>
+        <param name="range_min" value="0.3"/>
+        <param name="range_max" value="5"/>
+        <param name="scan_time" value= "1.0" />
+        <param name="output_frame_id" value="camera_front_link"/>
+        <remap from="image" to="/camera_front/depth/image_rect_raw"/>
+      </node>
+  </launch>
+  

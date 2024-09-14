@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- MoveIt options -->
+    <arg name="pipeline" default="ompl" doc="Planning pipeline to use with MoveIt" />
+
+    <arg name="rviz_config" default="$(find propio)rviz/mapping.rviz" />
+
+    <!-- Launch MoveIt -->
+    <group ns="robot">
+      <include file="$(find robot_moveit_complete)/launch/demo.launch" pass_all_args="true">
+          <param name="ros_control_namespace" value="robot" />
+          <arg name="load_robot_description" value="true" />
+          <arg name="moveit_controller_manager" value="simple" />
+          <arg name="debug" value="false" />
+      </include>
+    </group>
+
+    
+    <node pkg="tf" type="static_transform_publisher" name="end_effector_to_camera_arm_link" args="0.018 0.08 -0.11 -0.25 -1.63 -1.55 robot_j2n6s300_end_effector camera_arm_link 1"/>
+    <node pkg="tf" type="static_transform_publisher" name="robot_base_to_camera_front_link" args="0.324 0.05 0.172 0 0 0 robot_base_link camera_front_link 1"/>
+
+</launch>

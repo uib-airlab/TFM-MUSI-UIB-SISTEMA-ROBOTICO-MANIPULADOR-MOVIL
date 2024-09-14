@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: propio
+    relative_path: xacro/summit_j2n6s300_intel_d455_v2.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/summit_xl.srdf
+  CONFIG:
+    author_name: Miquel
+    author_email: miquelsitgesn@gmail.com
+    generated_timestamp: 1718565887

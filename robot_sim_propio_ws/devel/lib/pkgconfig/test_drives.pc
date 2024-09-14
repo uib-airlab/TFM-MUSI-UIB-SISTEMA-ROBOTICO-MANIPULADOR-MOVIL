@@ -1,0 +1,8 @@
+prefix=/home/miquel/robot_sim_propio_ws/devel
+
+Name: test_drives
+Description: Description of test_drives
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

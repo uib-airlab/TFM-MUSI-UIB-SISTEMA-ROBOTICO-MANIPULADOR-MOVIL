@@ -1,0 +1,8 @@
+prefix=/home/miquel/robot_sim_propio_ws/devel
+
+Name: boeing_gazebo_model_attachment_plugin
+Description: Description of boeing_gazebo_model_attachment_plugin
+Version: 1.0.2
+Cflags: -I/home/miquel/robot_sim_propio_ws/devel/include -I/home/miquel/robot_sim_propio_ws/src/gazebo_model_attachment_plugin/include
+Libs: -L${prefix}/lib -lboeing_gazebo_model_attachment_plugin
+Requires: gazebo_msgs gazebo_ros message_generation message_runtime roscpp

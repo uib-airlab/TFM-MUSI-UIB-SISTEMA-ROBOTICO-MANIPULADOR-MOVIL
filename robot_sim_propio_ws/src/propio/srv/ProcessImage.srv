@@ -1,0 +1,8 @@
+# ProcessImage.srv
+bool isFront
+---
+geometry_msgs/Pose pose
+float64 distance
+bool needsArm
+int32 numberObjects
+geometry_msgs/Vector3 dimensions 

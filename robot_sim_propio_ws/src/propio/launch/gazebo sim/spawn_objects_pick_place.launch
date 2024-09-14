@@ -1,0 +1,31 @@
+<launch>
+
+    <!-- Set the robot urdf on the parameter server -->
+    <param name="support_box" textfile="$(find propio)/objects/support_box.urdf" />
+    <!-- Set the robot urdf on the parameter server -->
+    <param name="grasp_box" textfile="$(find propio)/objects/grasp_box.urdf" />
+  
+    <!-- Set the robot urdf on the parameter server -->
+    <param name="grasp_sphere" textfile="$(find propio)/objects/grasp_sphere.urdf" />
+        <!-- Set the robot urdf on the parameter server -->
+    <param name="grasp_sphe" textfile="$(find propio)/objects/cardboard_box.sdf" />
+  
+    <!-- Spawn the support box in Gazebo -->
+    <node name="spawn_support" pkg="gazebo_ros" type="spawn_model" args="-urdf -param support_box 
+    -x 1 -y 0.2 -z 0.3 -model support_box" respawn="false" output="screen" />
+
+
+    <!-- Spawn the grasp box in Gazebo -->
+    <node name="spawn_grasp" pkg="gazebo_ros" type="spawn_model" args="-urdf -param grasp_box 
+    -x 0.84 -y 0.2 -z 0.7 -model grasp_box" respawn="false" output="screen" />
+    
+
+      <!-- Spawn the grasp box in Gazebo -->
+      <node name="spawn_grasp_sphere" pkg="gazebo_ros" type="spawn_model" args="-urdf -param grasp_sphere 
+      -x 0.86 -y 0 -z 0.7 -model grasp_sphere" respawn="false" output="screen" />
+        
+
+      <!-- Spawn the grasp box in Gazebo -->
+      <!--node name="spawn_grasp_sphe" pkg="gazebo_ros" type="spawn_model" args="-sdf -param grasp_sphe
+      -x 0.86 -y 0 -z 0.7 -model grasp_sphe" respawn="false" output="screen" /-->
+  </launch>

@@ -1,0 +1,77 @@
+arm_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - robot_j2n6s300_joint_1
+    - robot_j2n6s300_joint_2
+    - robot_j2n6s300_joint_3
+    - robot_j2n6s300_joint_4
+    - robot_j2n6s300_joint_5
+    - robot_j2n6s300_joint_6
+  gains:
+    robot_j2n6s300_joint_1:
+      p: 450
+      d: 5
+      i: 10
+      i_clamp: 0
+    robot_j2n6s300_joint_2:
+      p: 300000
+      d: 1
+      i: 5
+      i_clamp: 1
+    robot_j2n6s300_joint_3:
+      p: 240000
+      d: 1
+      i: 4
+      i_clamp: 0
+    robot_j2n6s300_joint_4:
+      p: 100
+      d: 0
+      i: 1
+      i_clamp: 0
+    robot_j2n6s300_joint_5:
+      p: 1500
+      d: 1
+      i: 2
+      i_clamp: 0
+    robot_j2n6s300_joint_6:
+      p: 200
+      d: 0
+      i: 0
+      i_clamp: 0
+  constraints:
+    goal_time: 10.0                     # Override default
+    stopped_velocity_tolerance: 0.05    # Override default
+    robot_j2n6s300_joint_1: {trajectory: 0.14, goal: 0.04}   # Override default
+    robot_j2n6s300_joint_2: {trajectory: 0.14, goal: 0.04}   # Override default
+    jrobot_j2n6s300_joint_3: {trajectory: 0.14, goal: 0.04}   # Override default 
+    robot_j2n6s300_joint_4: {trajectory: 0.14, goal: 0.04}   # Override default 
+    robot_j2n6s300_joint_5: {trajectory: 0.14, goal: 0.04}   # Override default
+    robot_j2n6s300_joint_6: {trajectory: 0.14, goal: 0.04}   # Override default
+gripper_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - robot_j2n6s300_joint_finger_1
+    - robot_j2n6s300_joint_finger_2
+    - robot_j2n6s300_joint_finger_3
+  gains:
+    robot_j2n6s300_joint_finger_1:
+      p: 6
+      d: 0
+      i: 1
+      i_clamp: 1
+    robot_j2n6s300_joint_finger_2:
+      p: 6
+      d: 0
+      i: 1
+      i_clamp: 1
+    robot_j2n6s300_joint_finger_3:
+      p: 6
+      d: 0
+      i: 1
+      i_clamp: 1
+  constraints:
+    goal_time: 10.0                     # Override default
+    stopped_velocity_tolerance: 0.1    # Override default
+    robot_j2n6s300_joint_finger_1: {trajectory: 0.3, goal: 0.2}   # Override default
+    robot_j2n6s300_joint_finger_2: {trajectory: 0.3, goal: 0.2}   # Override default
+    robot_j2n6s300_joint_finger_3: {trajectory: 0.3, goal: 0.2}   # Override default 

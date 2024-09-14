@@ -1,0 +1,8 @@
+prefix=/home/miquel/robot_sim_propio_ws/devel
+
+Name: robot_moveit_complete
+Description: Description of robot_moveit_complete
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/miquel/robot_sim_propio_ws/src/propio/build/devel/setup.sh

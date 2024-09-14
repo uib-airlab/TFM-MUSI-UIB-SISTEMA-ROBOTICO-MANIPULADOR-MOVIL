@@ -1,0 +1,25 @@
+<launch>
+  <!-- Cargar la descripción del robot desde el URDF -->
+  <param name="robot_description" textfile="$(find robot_moveit_complete)/config/gazebo_summit_xl.urdf" />
+  
+
+  <!-- Lanzar Gmapping para SLAM -->
+  <include file="$(find propio)/launch/slam_gmapping.launch" />
+
+
+  <!-- Nodo move_base para la navegación -->
+  <node pkg="move_base" type="move_base" name="move_base" output="screen">
+    <param name="base_global_planner" value="navfn/NavfnROS" />
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
+    <rosparam file="$(find propio)/config/costmap_common_params.yaml" command="load" />
+    <rosparam file="$(find propio)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find propio)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find propio)/config/base_local_planner_params.yaml" command="load" />
+    <remap from="cmd_vel" to="/robot/move/cmd_vel"/>
+  </node>
+
+  <!-- Lanzar depthimage_to_laserscan -->
+  <include file="$(find propio)/launch/depthimage_to_laserscan.launch" />
+
+
+</launch>
