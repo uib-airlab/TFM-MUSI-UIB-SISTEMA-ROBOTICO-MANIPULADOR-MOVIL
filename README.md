@@ -21,8 +21,5 @@ Create, work on and exit: 1.5 to 1.7
 ## Download the repository
 ```
 cd YOUR_ROS_SPACE
-mkdir summit_xl_manipulator
-cd summit_xl_manipulator
-git clone https://github.com/uib-airlab/TFM-MUSI-UIB-SISTEMA-ROBOTICO-MANIPULADOR-MOVIL.git
-
+git clone https://github.com/uib-airlab/summit_xl_manipulator.git
 ```
