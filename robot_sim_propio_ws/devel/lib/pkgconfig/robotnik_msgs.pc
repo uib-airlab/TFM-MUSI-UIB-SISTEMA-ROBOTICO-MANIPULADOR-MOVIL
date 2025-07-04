@@ -1,8 +1,0 @@
-prefix=/home/miquel/robot_sim_propio_ws/devel
-
-Name: robotnik_msgs
-Description: Description of robotnik_msgs
-Version: 2.4.0
-Cflags: -I/home/miquel/robot_sim_propio_ws/devel/include
-Libs: -L${prefix}/lib 
-Requires: actionlib_msgs message_runtime std_msgs geometry_msgs

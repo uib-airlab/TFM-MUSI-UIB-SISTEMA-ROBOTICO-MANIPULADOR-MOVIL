@@ -1,8 +1,0 @@
-prefix=/home/miquel/robot_sim_propio_ws/devel
-
-Name: simple_grasping
-Description: Description of simple_grasping
-Version: 0.4.1
-Cflags: -I/home/miquel/robot_sim_propio_ws/src/simple_grasping/include
-Libs: -L${prefix}/lib -lsimple_grasping
-Requires: actionlib geometry_msgs grasping_msgs moveit_msgs pcl_ros sensor_msgs shape_msgs
