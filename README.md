@@ -48,7 +48,6 @@ sudo apt install python3-pip
 pip install ultralytics
 pip install rospkg
 pip install pyassimp
-pip install scypy==1.8.1
 ```
 
 
