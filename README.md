@@ -55,8 +55,100 @@ pip install scypy==1.8.1
 ## How to use:
 ### Experiment 1
 Detection of objects and pick & place.
+Before use, it has to be changed the path to the detection model in the file ```.../summit_xl_manipulator/robot_sim_propio_ws/src/propio/scripts/Experimento_1/captura_objetos_exp1.py``` to the real path in the companion PC.
 
 #### In the summit PC:
+Execute the launch files to turn on the RealSense cameras, in two different consoles launch:
+##### Console 1:
+```
+roslaunch realsense2_camera rs_camera.launch enable_pointcloud:=true camera:=camera_front serial_no:=049122251210 align_depth:=true ordered_pc:=true color_width:=640 color_height:=480 color_fps:=15 depth_width:=640 depth_height:=480 depth_fps:=15
+```
+##### Console 2:
+```
+roslaunch realsense2_camera rs_camera.launch enable_pointcloud:=True camera:=camera_arm serial_no:=819612072790 align_depth:=true ordered_pc:=true color_width:=640 color_height:=480 color_fps:=15 depth_width:=640 depth_height:=480 depth_fps:=15
+```
+
+#### In the companion PC:
+Execute the launch in one console:
+```
+roslaunch propio RobotEXP1yEXP2.launch
+```
+
+#### In the virtaul environments (in the companion PC):
+Two consoles are required, one for the object detection and the other for the pick and place execution.
+##### Console 1 (object detection):
+```
+workon [env_name]
+cd /<path_to_workspace>
+source devel/setup.bash
+export PYTHONPATH=/home/<user_name>/.virtualenvs/<env_name>/lib/python3.8/site-packages:$PYTHONPATH
+export PYTHONPATH=$PYTHONPATH:/usr/lib/python3/dist-packages/
+python3 src/propio/scripts/Experimento_1/captura_objetos_exp1.py
+```
+##### Console 2 (pick and place):
+Once the code is running you must press intro in every stage of the pick and place.
+```
+workon [env_name]
+cd /<path_to_workspace>
+source devel/setup.bash
+export PYTHONPATH=/home/<user_name>/.virtualenvs/<env_name>/lib/python3.8/site-packages:$PYTHONPATH
+export PYTHONPATH=$PYTHONPATH:/usr/lib/python3/dist-packages/
+python3 src/propio/scripts/Experimento_1/pick_and_place_exp1.py
+```
+
+
+### Experiment 3
+Detection of objects, navigation to objects and pick & place.
+Before use, it has to be changed the path to the detection model in the file ```.../summit_xl_manipulator/robot_sim_propio_ws/src/propio/scripts/Experimento_1/captura_objetos_exp1.py``` to the real path in the companion PC.
+
+#### In the summit PC:
+Execute the launch files to turn on the RealSense cameras, in two different consoles launch:
+##### Console 1:
+```
+roslaunch realsense2_camera rs_camera.launch enable_pointcloud:=true camera:=camera_front serial_no:=049122251210 align_depth:=true ordered_pc:=true color_width:=640 color_height:=480 color_fps:=15 depth_width:=640 depth_height:=480 depth_fps:=15
+```
+##### Console 2:
+```
+roslaunch realsense2_camera rs_camera.launch enable_pointcloud:=True camera:=camera_arm serial_no:=819612072790 align_depth:=true ordered_pc:=true color_width:=640 color_height:=480 color_fps:=15 depth_width:=640 depth_height:=480 depth_fps:=15
+```
+
+#### In the companion PC:
+Execute the launch in one console:
+```
+roslaunch propio RobotEXP3.launch
+```
+
+#### In the virtaul environments (in the companion PC):
+Two consoles are required, one for the object detection and the other for the pick and place execution.
+##### Console 1 (navigation):
+```
+workon [env_name]
+cd /<path_to_workspace>
+source devel/setup.bash
+export PYTHONPATH=/home/<user_name>/.virtualenvs/<env_name>/lib/python3.8/site-packages:$PYTHONPATH
+export PYTHONPATH=$PYTHONPATH:/usr/lib/python3/dist-packages/
+python3 src/propio/scripts/Experimento_3/navigation_yolo_exp3.py
+```
+##### Console 2 (object detection):
+```
+workon [env_name]
+cd /<path_to_workspace>
+source devel/setup.bash
+export PYTHONPATH=/home/<user_name>/.virtualenvs/<env_name>/lib/python3.8/site-packages:$PYTHONPATH
+export PYTHONPATH=$PYTHONPATH:/usr/lib/python3/dist-packages/
+python3 src/propio/scripts/Experimento_3/captura_objetos_exp3.py
+```
+##### Console 3 (pick and place):
+Once the code is running you must press intro in every stage of the pick and place.
+```
+workon [env_name]
+cd /<path_to_workspace>
+source devel/setup.bash
+export PYTHONPATH=/home/<user_name>/.virtualenvs/<env_name>/lib/python3.8/site-packages:$PYTHONPATH
+export PYTHONPATH=$PYTHONPATH:/usr/lib/python3/dist-packages/
+python3 src/propio/scripts/Experimento_3/pick_and_place_exp3.py
+```
+
 
 
 
