@@ -1,2 +1,0 @@
-Count: 0, Time: 1.207895803451538 seconds
-Count: 1, Time: 0.743112230300903 seconds
