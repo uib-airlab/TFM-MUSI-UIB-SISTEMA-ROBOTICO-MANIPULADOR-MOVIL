@@ -99,7 +99,7 @@ python3 src/propio/scripts/Experimento_1/pick_and_place_exp1.py
 
 ### Experiment 3
 Detection of objects, navigation to objects and pick & place.
-Before use, it has to be changed the path to the detection model in the file ```.../summit_xl_manipulator/robot_sim_propio_ws/src/propio/scripts/Experimento_1/captura_objetos_exp1.py``` to the real path in the companion PC.
+Before use, it has to be changed the path to the detection model in the files ```.../summit_xl_manipulator/robot_sim_propio_ws/src/propio/scripts/Experimento_3/captura_objetos_exp3.py``` and ```.../summit_xl_manipulator/robot_sim_propio_ws/src/propio/scripts/Experimento_3/navigation_yolo_exp3.py```to the real path in the companion PC.
 
 #### In the summit PC:
 Execute the launch files to turn on the RealSense cameras, in two different consoles launch:
