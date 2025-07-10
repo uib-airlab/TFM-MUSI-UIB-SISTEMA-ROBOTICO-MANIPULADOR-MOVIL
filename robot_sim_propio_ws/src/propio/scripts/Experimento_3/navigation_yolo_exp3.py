@@ -40,7 +40,7 @@ class Navigation:
         self.point_matrix_front = None
         self.processing_front = False
         self.model=YOLO(path)
-        self.save=True
+        self.save=False
         self.width = 640
         self.inExploring=False
         self.height = 480
