@@ -43,9 +43,9 @@ class PointCloudToImage:
         self.point_matrix_front = None
         self.rgb_image_arm = None
         self.point_matrix_arm = None
-        self.width = 1280
-        self.height = 720
-        self.save = True
+        self.width = 640
+        self.height = 480
+        self.save = False
         self.numberObjects=0
         self.processing_front=False
         self.processing_arm=False
@@ -180,7 +180,7 @@ class PointCloudToImage:
 
         mask = (self.point_matrix_arm[:, :, 2] > 0.1) & (self.point_matrix_arm[:, :, 2] < 0.53)
         objects_points = self.point_matrix_arm[mask]
-        std_z = stats.median_abs_deviation(objects_points[:,2])
+        std_z = stats.median_absolute_deviation(objects_points[:,2])
         median_z = np.mean(objects_points[:,2], axis=0)
         print("Mediana", median_z)
         print("Desviacione estandard", std_z)
@@ -353,7 +353,7 @@ class PointCloudToImage:
             # Calculate mode and standard deviation
             z_values = objects_points[:, 2]
             
-            std_z = stats.median_abs_deviation(z_values)
+            std_z = stats.median_absolute_deviation(z_values)
             median_z = np.mean(z_values, axis=0)
             print("Mediana", median_z)
             print("Desviacione estandard", std_z)
@@ -503,8 +503,8 @@ class PointCloudToImage:
             rospy.logwarn("Elapsed time "+ str(elapsed_time))
             
             # Save the elapsed time to a text file
-            with open("EXP1/Front/execution_times.txt", "a") as file:  
-                file.write(f"Count: {str(self.count)}, Time: {str(elapsed_time)} seconds\n") 
+            # with open("EXP1/Front/execution_times.txt", "a") as file:  
+            #    file.write(f"Count: {str(self.count)}, Time: {str(elapsed_time)} seconds\n") 
             print("Finish Processing Front")
             self.count+=1
             return self.pose_target, distance, needsArm, self.numberObjects
