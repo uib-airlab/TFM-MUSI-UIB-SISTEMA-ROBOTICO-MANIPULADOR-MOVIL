@@ -15,6 +15,7 @@ sudo apt install ros-noetic-moveit
 sudo apt install ros-noetic-tf2-sensor-msgs
 sudo apt install ros-noetic-grasping-msgs
 sudo apt install ros-noetic-moveit-python
+sudo apt install ros-noetic-depthimage-to-laserscan
 ```
 ### Download and build the repository:
 ```
